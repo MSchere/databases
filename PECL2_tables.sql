@@ -4,6 +4,8 @@ drop table if exists instrument;
 drop table if exists musicGroup;
 drop table if exists song;
 drop table if exists disc;
+#drop table if exists digital;
+#drop table if exists physical;
 drop table if exists concert;
 drop table if exists ticket;
 drop table if exists user;
@@ -23,7 +25,6 @@ SET FOREIGN_KEY_CHECKS = 1;
 create table ticket
 (code int,
 price int,
-unique(code),
 primary key (code));
 
 create table concert
@@ -33,7 +34,6 @@ country varchar(40),
 city varchar(40),
 venue varchar (40),
 sells int,
-unique(code),
 primary key (code),
 foreign key (sells) references ticket(code));
 
@@ -45,18 +45,35 @@ create table song
 (title varchar(40),
 songDate date,
 duration char(40),
-unique(title),
 primary key (title));
 
 create table disc
 (id int,
 title varchar(40),
 editionDate date,
+model_disc varchar(8) check (model_disc in ('Digital', 'Physical')),
+song_format varchar(4) check (model_disc = 'Digital' and  song_format in('mp3','aac', 'wma','flac')),
+size_disc varchar(40) check (model_disc = 'Digital'),
+disc_type varchar(2) check (model_disc = 'Physical' and disc_type in('cd','lp')),
 contains varchar(40),
-unique(id),
 primary key (id),
 foreign key (contains) references song(title));
 #TODO: add digital and physical disc types.
+
+#create table digital
+#(song_format varchar(4) check (song_format in('MP3','AAC', 'WMA','FLAC')),
+#size varchar(40),
+#id int,
+#title varchar(40),
+#editionDate date,
+#foreign key (id) references disc(id));
+
+#create table physical
+#(disc_type varchar(2) check (disc_type in('CD','LP')),
+#id int,
+#title varchar(40),
+#editionDate date,
+#foreign key (id) references disc(id));
 
 create table musicGroup
 (id int,
@@ -80,7 +97,6 @@ phoneNumberHome int,
 composes varchar(40),
 plays varchar(40),
 belongs int,
-unique(id),
 primary key (id),
 foreign key (composes) references song(title),
 foreign key (plays) references instrument(name),
@@ -98,8 +114,7 @@ buysDisc int,
 buysTicket int,
 givesOpinionDisc int,
 givesOpinionConcert int,
-unique(nif),
-primary key (nif),
+primary key (NIF),
 foreign key (buysDisc) references disc(id),
 foreign key (buysTicket) references ticket(code),
 foreign key (givesOpinionDisc) references disc(id),
@@ -180,4 +195,3 @@ title_song varchar(40),
 primary key(reference_id, title_song),
 foreign key(reference_id) references disc(id),
 foreign key(title_song) references song(title));
-
