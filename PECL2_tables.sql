@@ -23,32 +23,28 @@ drop table if exists contains;
 SET FOREIGN_KEY_CHECKS = 1;
 
 create table ticket
-(code int,
-price int,
-primary key (code));
+(code int primary key,
+price int);
 
 create table concert
-(code int,
+(code int primary key,
 concertDate date,
 country varchar(40),
 city varchar(40),
 venue varchar (40),
 sells int,
-primary key (code),
 foreign key (sells) references ticket(code));
 
 create table instrument
-(name varchar(40),
-primary key(name));
+(name varchar(40) primary key);
 
 create table song
-(title varchar(40),
+(title varchar(40) primary key,
 songDate date,
-duration char(40),
-primary key (title));
+duration char(40));
 
 create table disc
-(id int,
+(id int primary key,
 title varchar(40),
 editionDate date,
 model_disc varchar(8) check (model_disc in ('Digital', 'Physical')),
@@ -56,7 +52,6 @@ song_format varchar(4) check (model_disc = 'Digital' and  song_format in('mp3','
 size_disc varchar(40) check (model_disc = 'Digital'),
 disc_type varchar(2) check (model_disc = 'Physical' and disc_type in('cd','lp')),
 contains varchar(40),
-primary key (id),
 foreign key (contains) references song(title));
 #TODO: add digital and physical disc types.
 
@@ -76,35 +71,34 @@ foreign key (contains) references song(title));
 #foreign key (id) references disc(id));
 
 create table musicGroup
-(id int,
+(id int primary key,
 genre varchar(40),
 performs int,
 records int,
-primary key (id),
 foreign key (performs) references concert(code),
 foreign key (records) references disc(id));
 
 create table musician
-(id int,
-name varchar(40),
-surname varchar(40),
+(id int primary key,
+name varchar(40) not null,
+surname varchar(40) not null,
 adress varchar(40),
 zipCode int,
 residenceCity varchar(40),
 province varchar(40),
-phoneNumberMobile int,
-phoneNumberHome int,
+phonesNumbers int,
+#phoneNumberMobile int,
+#phoneNumberHome int,
 composes varchar(40),
 plays varchar(40),
 belongs int,
-primary key (id),
 foreign key (composes) references song(title),
 foreign key (plays) references instrument(name),
 foreign key (belongs) references musicGroup(id)
 );
 
 create table user
-(nif varchar(9),
+(nif varchar(9) primary key,
 name varchar(40),
 firstSurname varchar(40),
 secondSurname varchar(40),
@@ -114,7 +108,6 @@ buysDisc int,
 buysTicket int,
 givesOpinionDisc int,
 givesOpinionConcert int,
-primary key (NIF),
 foreign key (buysDisc) references disc(id),
 foreign key (buysTicket) references ticket(code),
 foreign key (givesOpinionDisc) references disc(id),
@@ -123,6 +116,7 @@ foreign key (givesOpinionConcert) references concert(code));
 create table sells
 (concert_code int,
 ticket_code int,
+primary key(user_nif, concert_code),
 foreign key (concert_code) references concert(code),
 foreign key (ticket_code) references ticket(code));
 
