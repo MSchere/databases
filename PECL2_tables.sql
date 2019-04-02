@@ -31,9 +31,7 @@ create table concert
 concertDate date,
 country varchar(40),
 city varchar(40),
-venue varchar (40),
-sells int,
-foreign key (sells) references ticket(code));
+venue varchar (40));
 
 create table instrument
 (name varchar(40) primary key);
@@ -50,9 +48,7 @@ editionDate date,
 model_disc varchar(8) check (model_disc in ('Digital', 'Physical')),
 song_format varchar(4) check (model_disc = 'Digital' and  song_format in('mp3','aac', 'wma','flac')),
 size_disc varchar(40) check (model_disc = 'Digital'),
-disc_type varchar(2) check (model_disc = 'Physical' and disc_type in('cd','lp')),
-contains varchar(40),
-foreign key (contains) references song(title));
+disc_type varchar(2) check (model_disc = 'Physical' and disc_type in('cd','lp')));
 #TODO: add digital and physical disc types.
 
 #create table digital
@@ -72,11 +68,7 @@ foreign key (contains) references song(title));
 
 create table musicGroup
 (id int primary key,
-genre varchar(40),
-performs int,
-records int,
-foreign key (performs) references concert(code),
-foreign key (records) references disc(id));
+genre varchar(40));
 
 create table musician
 (id int primary key,
@@ -87,15 +79,8 @@ zipCode int,
 residenceCity varchar(40),
 province varchar(40),
 phonesNumbers int,
-#phoneNumberMobile int,
-#phoneNumberHome int,
-composes varchar(40),
-plays varchar(40),
-belongs int,
-foreign key (composes) references song(title),
-foreign key (plays) references instrument(name),
-foreign key (belongs) references musicGroup(id)
-);
+phoneNumberMobile int,
+phoneNumberHome int);
 
 create table user
 (nif varchar(9) primary key,
@@ -103,20 +88,12 @@ name varchar(40),
 firstSurname varchar(40),
 secondSurname varchar(40),
 email varchar(40),
-points int,
-buysDisc int,
-buysTicket int,
-givesOpinionDisc int,
-givesOpinionConcert int,
-foreign key (buysDisc) references disc(id),
-foreign key (buysTicket) references ticket(code),
-foreign key (givesOpinionDisc) references disc(id),
-foreign key (givesOpinionConcert) references concert(code));
+points int);
 
 create table sells
 (concert_code int,
 ticket_code int,
-primary key(user_nif, concert_code),
+primary key(concert_code, ticket_code),
 foreign key (concert_code) references concert(code),
 foreign key (ticket_code) references ticket(code));
 
