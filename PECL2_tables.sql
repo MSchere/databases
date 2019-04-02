@@ -4,8 +4,6 @@ drop table if exists instrument;
 drop table if exists musicGroup;
 drop table if exists song;
 drop table if exists disc;
-#drop table if exists digital;
-#drop table if exists physical;
 drop table if exists concert;
 drop table if exists ticket;
 drop table if exists user;
@@ -16,7 +14,6 @@ drop table if exists buysDisc;
 drop table if exists buysTicket;
 drop table if exists plays;
 drop table if exists belongs;
-drop table if exists composes;
 drop table if exists creates;
 drop table if exists performs;
 drop table if exists contains;
@@ -39,32 +36,16 @@ create table instrument
 create table song
 (title varchar(40) primary key,
 songDate date,
-duration char(40));
+duration int);
 
 create table disc
 (id int primary key,
-title varchar(40),
+title varchar(60),
 editionDate date,
 model_disc varchar(8) check (model_disc in ('Digital', 'Physical')),
 song_format varchar(4) check (model_disc = 'Digital' and  song_format in('mp3','aac', 'wma','flac')),
 size_disc varchar(40) check (model_disc = 'Digital'),
 disc_type varchar(2) check (model_disc = 'Physical' and disc_type in('cd','lp')));
-#TODO: add digital and physical disc types.
-
-#create table digital
-#(song_format varchar(4) check (song_format in('MP3','AAC', 'WMA','FLAC')),
-#size varchar(40),
-#id int,
-#title varchar(40),
-#editionDate date,
-#foreign key (id) references disc(id));
-
-#create table physical
-#(disc_type varchar(2) check (disc_type in('CD','LP')),
-#id int,
-#title varchar(40),
-#editionDate date,
-#foreign key (id) references disc(id));
 
 create table musicGroup
 (id int primary key,
@@ -78,7 +59,6 @@ adress varchar(40),
 zipCode int,
 residenceCity varchar(40),
 province varchar(40),
-phonesNumbers int,
 phoneNumberMobile int,
 phoneNumberHome int);
 
@@ -139,18 +119,11 @@ primary key(id_musician, id_group),
 foreign key (id_musician) references musician(id),
 foreign key (id_group) references musicgroup(id));
 
-create table composes
-(id int,
-title varchar(40),
-primary key(id, title),
-foreign key(id) references musician(id),
-foreign key(title) references song(title));
-
 create table creates
-(id_musician int,
+(id_musicGroup int,
 reference_id int,
-primary key(id_musician, reference_id),
-foreign key(id_musician) references musician(id),
+primary key(id_musicGroup, reference_id),
+foreign key(id_musicGroup) references musicGroup(id),
 foreign key(reference_id) references disc(id));
 
 create table performs
