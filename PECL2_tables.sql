@@ -1,7 +1,7 @@
 SET FOREIGN_KEY_CHECKS = 0;
 drop table if exists musician;
 drop table if exists instrument;
-drop table if exists musicGroup;
+drop table if exists musicgroup;
 drop table if exists song;
 drop table if exists disc;
 drop table if exists concert;
@@ -31,20 +31,20 @@ city varchar(40),
 venue varchar (40));
 
 create table song
-(title varchar(40) primary key,
+(title varchar(60) primary key,
 songDate date,
-duration char(40));
+duration int);
 
 create table disc
 (id int primary key,
-title varchar(40),
+title varchar(60),
 editionDate date,
 model_disc varchar(8) check (model_disc in ('Digital', 'Physical')),
 song_format varchar(4) check (model_disc = 'Digital' and  song_format in('mp3','aac', 'wma','flac')),
 size_disc varchar(40) check (model_disc = 'Digital'),
 disc_type varchar(2) check (model_disc = 'Physical' and disc_type in('cd','lp')));
 
-create table musicGroup
+create table musicgroup
 (id int primary key,
 genre varchar(40));
 
@@ -60,8 +60,8 @@ phoneNumberMobile int,
 phoneNumberHome int);
 
 create table instrument
-(name_instrument varchar(40),
-id_musician int,
+(id_musician int,
+name_instrument varchar(40),
 primary key(id_musician, name_instrument),
 foreign key(id_musician) references musician(id));
 
@@ -83,6 +83,7 @@ foreign key (ticket_code) references ticket(code));
 create table givesOpinionConcert
 (user_nif varchar(40),
 concert_code int,
+points_rate_concert int,
 primary key (user_nif, concert_code),
 foreign key (user_nif) references user(nif),
 foreign key (concert_code) references concert(code));
@@ -90,6 +91,7 @@ foreign key (concert_code) references concert(code));
 create table givesOpinionDisc
 (user_nif varchar(40),
 disc_id int,
+points_rate_disc int,
 primary key (user_nif, disc_id),
 foreign key (user_nif) references user(nif),
 foreign key (disc_id) references disc(id));
@@ -138,7 +140,7 @@ foreign key(code_concert) references concert(code));
 
 create table contains
 (reference_id int,
-title_song varchar(40),
+title_song varchar(60),
 primary key(reference_id, title_song),
 foreign key(reference_id) references disc(id),
 foreign key(title_song) references song(title));
