@@ -30,17 +30,14 @@ country varchar(40),
 city varchar(40),
 venue varchar (40));
 
-create table instrument
-(name varchar(40) primary key);
-
 create table song
 (title varchar(40) primary key,
 songDate date,
-duration int);
+duration char(40));
 
 create table disc
 (id int primary key,
-title varchar(60),
+title varchar(40),
 editionDate date,
 model_disc varchar(8) check (model_disc in ('Digital', 'Physical')),
 song_format varchar(4) check (model_disc = 'Digital' and  song_format in('mp3','aac', 'wma','flac')),
@@ -61,6 +58,12 @@ residenceCity varchar(40),
 province varchar(40),
 phoneNumberMobile int,
 phoneNumberHome int);
+
+create table instrument
+(name_instrument varchar(40),
+id_musician int,
+primary key(id_musician, name_instrument),
+foreign key(id_musician) references musician(id));
 
 create table user
 (nif varchar(9) primary key,
@@ -106,11 +109,11 @@ foreign key (user_nif) references user(nif),
 foreign key (ticket_code) references ticket(code));
 
 create table plays
-(id int,
-name varchar(40),
-primary key (id, name),
-foreign key (id) references musician(id),
-foreign key (name) references instrument(name));
+(id_musician int,
+name_instrument varchar(40),
+primary key (id_musician, name_instrument),
+foreign key (id_musician, name_instrument) references instrument(id_musician, name_instrument) on delete cascade,
+foreign key (id_musician) references musician(id));
 
 create table belongs
 (id_musician int,
@@ -123,15 +126,15 @@ create table creates
 (id_musicGroup int,
 reference_id int,
 primary key(id_musicGroup, reference_id),
-foreign key(id_musicGroup) references musicGroup(id),
+foreign key(id_musicGroup) references musicgroup(id),
 foreign key(reference_id) references disc(id));
 
 create table performs
-(id int,
-code int,
-primary key(id, code),
-foreign key(id) references musicGroup(id),
-foreign key(code) references concert(code));
+(id_musicGroup int,
+code_concert int,
+primary key(id_musicGroup, code_concert),
+foreign key(id_musicGroup) references musicGroup(id),
+foreign key(code_concert) references concert(code));
 
 create table contains
 (reference_id int,
