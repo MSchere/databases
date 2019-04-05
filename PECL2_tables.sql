@@ -23,6 +23,31 @@ create table ticket
 (code int primary key,
 price int);
 
+SET FOREIGN_KEY_CHECKS = 0;
+drop table if exists musician;
+drop table if exists instrument;
+drop table if exists musicgroup;
+drop table if exists song;
+drop table if exists disc;
+drop table if exists concert;
+drop table if exists ticket;
+drop table if exists user;
+drop table if exists sells;
+drop table if exists givesOpinionDisc;
+drop table if exists givesOpinionConcert;
+drop table if exists buysDisc;
+drop table if exists buysTicket;
+drop table if exists plays;
+drop table if exists belongs;
+drop table if exists creates;
+drop table if exists performs;
+drop table if exists contains;
+SET FOREIGN_KEY_CHECKS = 1;
+
+create table ticket
+(code int primary key,
+price int);
+
 create table concert
 (code int primary key,
 concertDate date,

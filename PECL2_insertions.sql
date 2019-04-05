@@ -80,6 +80,22 @@ insert into contains values (2984, 'Part 2: "Resolution"');
 insert into contains values (2984, 'Part 3: "Pursuance"');
 insert into contains values (2984, 'Part 4: "Psalm"');
 
+insert into concert values (3980, '2018-02-22', 'USA', 'San Francisco', 'Golden Park');
+insert into ticket values (271, 65);
+insert into ticket values (272, 65);
+insert into ticket values (273, 65);
+insert into sells values (3980 ,271);
+insert into sells values (3980, 272);
+insert into sells values (3980, 273);
+
+insert into concert values (3990, '2019-12-03', 'Spain', 'Madrid', 'Parque del Retiro');
+insert into ticket values (281, 110);
+insert into ticket values (282, 110);
+insert into ticket values (283, 110);
+insert into sells values (3990 ,281);
+insert into sells values (3990, 282);
+insert into sells values (3990, 283);
+
 #West Montgomery´s Band ID: 110
 insert into musicGroup values (110, 'Jazz');
 insert into musician values (05264892, 'Wes', 'Montgomery', 'Allison Ave', 46224, 'Indianapolis', 'Indiana', 638964274, 923754964);
@@ -121,4 +137,73 @@ insert into contains values (1784, 'Four on Six');
 insert into contains values (1784, 'West Coast Blues');
 insert into contains values (1784, 'In Your Own Sweet Way');
 insert into contains values (1784, 'Mr. Walker');
+
 insert into contains values (1784, 'Gone With the Wind');
+
+insert into concert values (4470, '2017-02-03', 'France', 'Paris' , 'Le Jardin du Luxembourg');
+insert into ticket values (160, 75);
+insert into ticket values (161, 75);
+insert into ticket values (162, 75);
+insert into ticket values (173, 75);
+insert into ticket values (184, 75);
+insert into ticket values (185, 75);
+insert into sells values (4470 ,160);
+insert into sells values (4470, 161);
+insert into sells values (4470, 162);
+
+insert into concert values (4480, '2018-01-01', 'Spain', 'Madrid', 'Parque Rey Juan Carlos');
+insert into ticket values (170, 110);
+insert into ticket values (171, 110);
+insert into ticket values (172, 110);
+insert into sells values (4480 ,170);
+insert into sells values (4480, 171);
+insert into sells values (4480, 172);
+
+insert into user values (02321423, 'Pedro', 'López', 'Perez', 'pedrolop@gmail.com', 210);
+insert into buysTicket values (02321423, 271);
+insert into buysTicket values (02321423, 281);
+insert into buysTicket values (02321423, 160);
+insert into buysTicket values (02321423, 170);
+insert into givesOpinionConcert values (02321423, 3980, 7);
+insert into givesOpinionConcert values (02321423, 3990, 9);
+insert into givesOpinionConcert values (02321423, 4470, 6);
+insert into givesOpinionConcert values (02321423, 4480, 10);
+insert into buysDisc values (02321423, 2984);
+insert into buysDisc values (02321423, 1784);
+insert into givesOpinionDisc values (02321423, 2984, 8);
+insert into givesOpinionDisc values (02321423, 1784, 7);
+
+insert into user values (05838743, 'Johnathan', 'Joestar', '', 'jojoReference@hotmail.com', 2203);
+
+insert into user values (04737492, 'Peter', 'McDonald', 'Douglas', 'peterMcd@gmail.com', 122);
+insert into buysTicket values (04737492, 171);
+insert into givesOpinionConcert values (04737492, 3980, 7);
+insert into givesOpinionDisc values (04737492, 2984, 8);
+insert into givesOpinionDisc values (04737492, 1784, 5);
+
+insert into user values (01238471, 'James', 'Miles', 'Johnson', 'jimmymj@yahoomail.com', 3);
+insert into buysTicket values (01238471, 161);
+insert into givesOpinionConcert values (01238471, 3990, 8);
+insert into givesOpinionConcert values (01238471, 4470, 5);
+
+insert into user values (04528483, 'Putin', 'Makarov', 'Vlasov', 'putinvlas@protonmail.com', 323);
+insert into buysDisc values (04528483, 2984);
+insert into givesOpinionDisc values (04528483, 2984, 7);
+
+insert into user values (04917493, 'Pierre', 'Chauvet', 'Derroux', 'picharroux@gmail.com', 1002);
+insert into buysDisc values (04917493, 2984);
+insert into buysTicket values (04917493, 184);
+
+insert into user values (03283295, 'Igor', 'Bogdanoff', 'Yourievitch', 'thebog@hotmail.com', 3023);
+insert into buysTicket values (03283295, 162);
+insert into givesOpinionConcert values (03283295, 4470, 7);
+
+insert into user values (02374827, 'Heins', 'Christoffen', 'Schmidt', 'heincrhis@hotmail.com', 2304);
+insert into buysTicket values (02374827, 282);
+insert into givesOpinionConcert values (02374827, 3990, 6);
+
+insert into user values (03284672, 'Hamza', 'Al Hajib', 'Burkashin', 'hamzahaji@gmail.com', 742);
+insert into buysDisc values (03284672, 1784);
+
+insert into user values (09373493, 'Yoko', 'Namakura', 'Furikawa', 'namasan@hotmail.com', 934);
+insert into buysTicket values (02321423, 173);
