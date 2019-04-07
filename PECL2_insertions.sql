@@ -159,57 +159,6 @@ insert into sells values (4480 ,170);
 insert into sells values (4480, 171);
 insert into sells values (4480, 172);
 
-insert into user values (02321423, 'Pedro', 'López', 'Perez', 'pedrolop@gmail.com', 210);
-insert into buysTicket values (02321423, 271);
-insert into buysTicket values (02321423, 281);
-insert into buysTicket values (02321423, 160);
-insert into buysTicket values (02321423, 170);
-insert into givesOpinionConcert values (02321423, 3980, 7);
-insert into givesOpinionConcert values (02321423, 3990, 9);
-insert into givesOpinionConcert values (02321423, 4470, 6);
-insert into givesOpinionConcert values (02321423, 4480, 10);
-insert into buysDisc values (02321423, 2056);
-insert into buysDisc values (02321423, 2984);
-insert into buysDisc values (02321423, 1784);
-insert into givesOpinionDisc values (02321423, 2056, 8);
-insert into givesOpinionDisc values (02321423, 2984, 8);
-insert into givesOpinionDisc values (02321423, 1784, 7);
-
-insert into user values (05838743, 'Johnathan', 'Joestar', '', 'jojoReference@hotmail.com', 2203);
-
-insert into user values (04737492, 'Peter', 'McDonald', 'Douglas', 'peterMcd@gmail.com', 122);
-insert into buysTicket values (04737492, 171);
-insert into givesOpinionConcert values (04737492, 3980, 7);
-insert into givesOpinionDisc values (04737492, 2984, 8);
-insert into givesOpinionDisc values (04737492, 1784, 5);
-
-insert into user values (01238471, 'James', 'Miles', 'Johnson', 'jimmymj@yahoomail.com', 3);
-insert into buysTicket values (01238471, 161);
-insert into givesOpinionConcert values (01238471, 3990, 8);
-insert into givesOpinionConcert values (01238471, 4470, 5);
-
-insert into user values (04528483, 'Putin', 'Makarov', 'Vlasov', 'putinvlas@protonmail.com', 323);
-insert into buysDisc values (04528483, 2984);
-insert into givesOpinionDisc values (04528483, 2984, 7);
-
-insert into user values (04917493, 'Pierre', 'Chauvet', 'Derroux', 'picharroux@gmail.com', 1002);
-insert into buysDisc values (04917493, 2984);
-insert into buysTicket values (04917493, 184);
-
-insert into user values (03283295, 'Igor', 'Bogdanoff', 'Yourievitch', 'thebog@hotmail.com', 3023);
-insert into buysTicket values (03283295, 162);
-insert into givesOpinionConcert values (03283295, 4470, 7);
-
-insert into user values (02374827, 'Heins', 'Christoffen', 'Schmidt', 'heincrhis@hotmail.com', 2304);
-insert into buysTicket values (02374827, 282);
-insert into givesOpinionConcert values (02374827, 3990, 6);
-
-insert into user values (03284672, 'Hamza', 'Al Hajib', 'Burkashin', 'hamzahaji@gmail.com', 742);
-insert into buysDisc values (03284672, 1784);
-
-insert into user values (09373493, 'Yoko', 'Namakura', 'Furikawa', 'namasan@hotmail.com', 934);
-insert into buysTicket values (02321423, 173);
-
 #Reincidentes´s Band ID: 430
 insert into musicGroup values (430, 'Rock');
 
@@ -313,3 +262,55 @@ insert into contains values (3229, 'Part 7: "Ángeles del suelo"');
 insert into contains values (3229, 'Part 8: " Las últimas habitaciones"');
 insert into contains values (3229, 'Part 9: "Plomo en los bolsillos"');
 insert into contains values (3229, 'Part 10: "Pedimiento"');
+
+#Users
+insert into user values (02321423, 'Pedro', 'López', 'Perez', 'pedrolop@gmail.com', 210);
+insert into buysTicket values (02321423, 271);
+insert into buysTicket values (02321423, 281);
+insert into buysTicket values (02321423, 160);
+insert into buysTicket values (02321423, 170);
+insert into givesOpinionConcert values (02321423, 3980, 7);
+insert into givesOpinionConcert values (02321423, 3990, 9);
+insert into givesOpinionConcert values (02321423, 4470, 6);
+insert into givesOpinionConcert values (02321423, 4480, 10);
+insert into buysDisc values (02321423, 2056);
+insert into buysDisc values (02321423, 2984);
+insert into buysDisc values (02321423, 1784);
+insert into givesOpinionDisc values (02321423, 2056, 8);
+insert into givesOpinionDisc values (02321423, 2984, 8);
+insert into givesOpinionDisc values (02321423, 1784, 7);
+
+insert into user values (05838743, 'Johnathan', 'Joestar', '', 'jojoReference@hotmail.com', 2203);
+
+insert into user values (04737492, 'Peter', 'McDonald', 'Douglas', 'peterMcd@gmail.com', 122);
+insert into buysTicket values (04737492, 171);
+insert into givesOpinionConcert values (04737492, 3980, 7);
+insert into givesOpinionDisc values (04737492, 2984, 8);
+insert into givesOpinionDisc values (04737492, 1784, 5);
+
+insert into user values (01238471, 'James', 'Miles', 'Johnson', 'jimmymj@yahoomail.com', 3);
+insert into buysTicket values (01238471, 161);
+insert into givesOpinionConcert values (01238471, 3990, 8);
+insert into givesOpinionConcert values (01238471, 4470, 5);
+
+insert into user values (04528483, 'Putin', 'Makarov', 'Vlasov', 'putinvlas@protonmail.com', 323);
+insert into buysDisc values (04528483, 2984);
+insert into givesOpinionDisc values (04528483, 2984, 7);
+
+insert into user values (04917493, 'Pierre', 'Chauvet', 'Derroux', 'picharroux@gmail.com', 1002);
+insert into buysDisc values (04917493, 2984);
+insert into buysTicket values (04917493, 184);
+
+insert into user values (03283295, 'Igor', 'Bogdanoff', 'Yourievitch', 'thebog@hotmail.com', 3023);
+insert into buysTicket values (03283295, 162);
+insert into givesOpinionConcert values (03283295, 4470, 7);
+
+insert into user values (02374827, 'Heins', 'Christoffen', 'Schmidt', 'heincrhis@hotmail.com', 2304);
+insert into buysTicket values (02374827, 282);
+insert into givesOpinionConcert values (02374827, 3990, 6);
+
+insert into user values (03284672, 'Hamza', 'Al Hajib', 'Burkashin', 'hamzahaji@gmail.com', 742);
+insert into buysDisc values (03284672, 1784);
+
+insert into user values (09373493, 'Yoko', 'Namakura', 'Furikawa', 'namasan@hotmail.com', 934);
+insert into buysTicket values (02321423, 173);
