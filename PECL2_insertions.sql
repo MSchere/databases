@@ -81,6 +81,7 @@ insert into contains values (2984, 'Part 3: "Pursuance"');
 insert into contains values (2984, 'Part 4: "Psalm"');
 
 insert into concert values (3980, '2018-02-22', 'USA', 'San Francisco', 'Golden Park');
+insert into performs values (270, 3980);
 insert into ticket values (271, 65);
 insert into ticket values (272, 65);
 insert into ticket values (273, 65);
@@ -89,6 +90,7 @@ insert into sells values (3980, 272);
 insert into sells values (3980, 273);
 
 insert into concert values (3990, '2019-12-03', 'Spain', 'Madrid', 'Parque del Retiro');
+insert into performs values (270, 3990);
 insert into ticket values (281, 110);
 insert into ticket values (282, 110);
 insert into ticket values (283, 110);
@@ -141,6 +143,7 @@ insert into contains values (1784, 'Mr. Walker');
 insert into contains values (1784, 'Gone With the Wind');
 
 insert into concert values (4470, '2017-02-03', 'France', 'Paris' , 'Le Jardin du Luxembourg');
+insert into performs values (110, 4470);
 insert into ticket values (160, 75);
 insert into ticket values (161, 75);
 insert into ticket values (162, 75);
@@ -152,6 +155,7 @@ insert into sells values (4470, 161);
 insert into sells values (4470, 162);
 
 insert into concert values (4480, '2018-01-01', 'Spain', 'Madrid', 'Parque Rey Juan Carlos');
+insert into performs values (110, 4480);
 insert into ticket values (170, 110);
 insert into ticket values (171, 110);
 insert into ticket values (172, 110);
