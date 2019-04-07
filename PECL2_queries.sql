@@ -25,4 +25,5 @@ select song.title, musician.name from musician, belongs, musicgroup, creates, di
 select distinct musician.name, disc.title,disc.song_format, disc.size_disc from musician, musicgroup, disc, creates, plays, instrument where disc.model_disc = "Digital" && musicgroup.id = creates.id_musicGroup && creates.reference_id = disc.id && musician.id = plays.id_musician && instrument.name_instrument = plays.name_instrument && instrument.name_instrument = "Guitar";
 #13
 select user.name, user.firstSurname, user.secondSurname from user, givesopinionconcert, concert, sells, ticket, buysticket where concert.code = sells.concert_code && sells.ticket_code = ticket.code && user.nif = buysticket.user_nif && ticket.code = buysticket.ticket_code && givesopinionconcert.concert_code = concert.code && user.nif = givesopinionconcert.user_nif && year(concert.concertDate) = "2018";
-
+#14
+select disc.title, song.title, givesopiniondisc.points_rate_disc from givesopiniondisc, disc, buysdisc, contains, song where buysdisc.user_nif = givesopiniondisc.user_nif && disc.id = givesopiniondisc.disc_id && buysdisc.disc_id = disc.id && disc.id = contains.reference_id && contains.title_song = song.title group by song.title having avg(givesopiniondisc.points_rate_disc) >= 8;
