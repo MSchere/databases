@@ -139,7 +139,6 @@ insert into contains values (1784, 'Four on Six');
 insert into contains values (1784, 'West Coast Blues');
 insert into contains values (1784, 'In Your Own Sweet Way');
 insert into contains values (1784, 'Mr. Walker');
-
 insert into contains values (1784, 'Gone With the Wind');
 
 insert into concert values (4470, '2017-02-03', 'France', 'Paris' , 'Le Jardin du Luxembourg');
