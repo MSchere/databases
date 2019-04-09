@@ -20,8 +20,10 @@ select disc.title
 from contains, disc
 where contains.reference_id = disc.id group by disc.title having count(contains.title_song) >= 10;
 #6
-select distinct musicgroup.id, musicgroup.genre from musicgroup,(select count(musician.id) as counted from musician, belongs, musicgroup where belongs.id_musician = musician.id && belongs.id_group = musicgroup.id group by musicgroup.id) as counts where counted >= 3;
-select distinct musicgroup.id, musicgroup.genre from musicgroup, belongs, musician where belongs.id_musician = musician.id && belongs.id_group = musicgroup.id group by musicgroup.id having count(musician.id) >= 3;
+select distinct musicgroup.id, musicgroup.genre 
+from musicgroup, belongs, musician 
+where belongs.id_musician = musician.id && belongs.id_group = musicgroup.id 
+group by musicgroup.id having count(musician.id) >= 3;
 #7
 select user.name, disc.title, givesopiniondisc.points_rate_disc 
 from givesopiniondisc, user, buysdisc, disc 
@@ -67,3 +69,18 @@ from givesopiniondisc, disc, buysdisc, contains, song where buysdisc.user_nif = 
 && disc.id = givesopiniondisc.disc_id && buysdisc.disc_id = disc.id && disc.id = contains.reference_id 
 && contains.title_song = song.title group by song.title having avg(givesopiniondisc.points_rate_disc) >= 8;
 #15
+SELECT DISTINCT musicgroup.id, musicgroup.genre, musician.id, musician.name
+FROM musician, belongs, musicgroup, performs, concert
+WHERE musician.id = belongs.id_musician && belongs.id_group = musicgroup.id && musicgroup.id = performs.id_musicGroup 
+&& performs.code_concert = concert.code && musicgroup.id 
+NOT IN (SELECT musicgroup.id FROM musicgroup, performs, concert
+WHERE musicgroup.id = performs.id_musicGroup && performs.code_concert = concert.code && 'Spain' = concert.country) && musicgroup.id 
+IN (SELECT creates.id_musicGroup
+FROM creates, disc, contains
+WHERE creates.reference_id = disc.id && disc.id = contains.reference_id GROUP BY disc.id
+HAVING COUNT(contains.title_song) > 10);
+#16
+SELECT disc.title, contains.title_song, musician.name
+FROM (((((musician INNER JOIN belongs ON musician.id = belongs.id_musician) INNER JOIN musicgroup ON belongs.id_group = musicgroup.id)
+INNER JOIN creates ON musicgroup.id = creates.id_musicGroup) INNER JOIN disc ON creates.reference_id = disc.id)
+INNER JOIN contains ON disc.id = contains.reference_id);
