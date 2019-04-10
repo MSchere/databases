@@ -60,10 +60,8 @@ phoneNumberMobile int,
 phoneNumberHome int);
 
 create table instrument
-(id_musician int,
-name_instrument varchar(40),
-primary key(id_musician, name_instrument),
-foreign key(id_musician) references musician(id));
+(name_instrument varchar(40),
+primary key(name_instrument));
 
 create table user
 (nif varchar(9) primary key,
@@ -105,6 +103,7 @@ foreign key (disc_id) references disc(id));
 
 create table buysTicket
 (user_nif varchar(40),
+ticket_number int, check (ticket_number in (1,2,3,4,5,6)),
 ticket_code int,
 primary key (user_nif, ticket_code),
 foreign key (user_nif) references user(nif),
@@ -114,7 +113,7 @@ create table plays
 (id_musician int,
 name_instrument varchar(40),
 primary key (id_musician, name_instrument),
-foreign key (id_musician, name_instrument) references instrument(id_musician, name_instrument) on delete cascade,
+foreign key (name_instrument) references instrument(name_instrument),
 foreign key (id_musician) references musician(id));
 
 create table belongs
