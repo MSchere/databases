@@ -105,6 +105,7 @@ create table buysTicket
 (user_nif varchar(40),
 ticket_number int, check (ticket_number in (1,2,3,4,5,6)),
 ticket_code int,
+date_ticket_bought date, check (date_ticket_bought <=curdate()),
 primary key (user_nif, ticket_code),
 foreign key (user_nif) references user(nif),
 foreign key (ticket_code) references ticket(code));
