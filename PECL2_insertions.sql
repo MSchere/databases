@@ -162,7 +162,6 @@ insert into sells values (4480 ,170);
 insert into sells values (4480, 171);
 insert into sells values (4480, 172);
 
-<<<<<<< HEAD
 insert into user values (02321423, 'Pedro', 'López', 'Perez', 'pedrolop@gmail.com', 210);
 insert into buysTicket values (02321423, 271);
 insert into buysTicket values (02321423, 281);
@@ -214,8 +213,6 @@ insert into buysDisc values (03284672, 1784);
 insert into user values (09373493, 'Yoko', 'Namakura', 'Furikawa', 'namasan@hotmail.com', 934);
 insert into buysTicket values (02321423, 173);
 
-=======
->>>>>>> d18441ed27b8b8a037655223fc32d0c2d796c358
 #Reincidentes´s Band ID: 430
 insert into musicGroup values (430, 'Rock');
 
@@ -271,31 +268,6 @@ insert into contains values (3492, 'Como quiere tu abuelita');
 insert into disc values (6321, 'Revolcón', '2000-02-06', 'Physical', '', '', 'CD');
 insert into creates values (430,6321);
 
-<<<<<<< HEAD
-insert into song values ('Part 1: "Barniz"', '2000-02-06', 234);
-insert into song values ('Part 2: "Incandescente"', '2000-02-06', 250);
-insert into song values ('Part 3: "Amor temporero"', '2000-02-06', 240);
-insert into song values ('Part 4: "Corazón de mimbre"', '2000-02-06', 337);
-insert into song values ('Part 5: "El perro verde"', '2000-02-06', 242);
-insert into song values ('Part 6: "Duerme conmigo"', '2000-02-06', 220);
-insert into song values ('Part 7: "Canto de tierra seca I"', '2000-02-06', 72);
-insert into song values ('Part 8: " Canto de tierra seca II"', '2000-02-06', 206);
-insert into song values ('Part 9: "Prisma tristeza"', '2000-02-06', 221);
-insert into song values ('Part 10: "Mojama"', '2000-02-06', 235);
-insert into song values ('Part 11: "Si viene la pestañi"', '2000-02-06', 221);
-
-insert into contains values (6321, 'Part 1: "Barniz"');
-insert into contains values (6321, 'Part 2: "Incandescente"');
-insert into contains values (6321, 'Part 3: "Amor temporero"');
-insert into contains values (6321, 'Part 4: "Corazón de mimbre"');
-insert into contains values (6321, 'Part 5: "El perro verde"');
-insert into contains values (6321, 'Part 6: "Duerme conmigo"');
-insert into contains values (6321, 'Part 7: "Canto de tierra seca I"');
-insert into contains values (6321, 'Part 8: " Canto de tierra seca II"');
-insert into contains values (6321, 'Part 9: "Prisma tristeza"');
-insert into contains values (6321, 'Part 10: "Mojama"');
-insert into contains values (6321, 'Part 11: "Si viene la pestañi"');
-=======
 insert into song values ('Barniz', '2000-02-06', 234);
 insert into song values ('Incandescente', '2000-02-06', 250);
 insert into song values ('Amor temporero', '2000-02-06', 240);
@@ -319,34 +291,10 @@ insert into contains values (6321, 'Canto de tierra seca II');
 insert into contains values (6321, 'Prisma tristeza');
 insert into contains values (6321, 'Mojama');
 insert into contains values (6321, 'Si viene la pestañi');
->>>>>>> d18441ed27b8b8a037655223fc32d0c2d796c358
 
 insert into disc values (3229, 'En mi hambre mando yo', '2011-09-27', 'Physical', '', '', 'CD');
 insert into creates values (430, 3229);
 
-<<<<<<< HEAD
-insert into song values ('Part 1: "Bienvenido al secadero"', '2011-09-27', 224);
-insert into song values ('Part 2: "La majada"', '2011-09-27', 255);
-insert into song values ('Part 3: "Sobran bueyes"', '2011-09-27', 251);
-insert into song values ('Part 4: "El día que lluevan pianos"', '2011-09-27', 250);
-insert into song values ('Part 5: "Canaleros"', '2011-09-27', 311);
-insert into song values ('Part 6: "Ojalá me quieras libre"', '2011-09-27', 257);
-insert into song values ('Part 7: "Ángeles del suelo"', '2011-09-27', 223);
-insert into song values ('Part 8: " Las últimas habitaciones"', '2011-09-27', 220);
-insert into song values ('Part 9: "Plomo en los bolsillos"', '2011-09-27', 245);
-insert into song values ('Part 10: "Pedimiento"', '2011-09-27', 260);
-
-insert into contains values (3229, 'Part 1: "Bienvenido al secadero"');
-insert into contains values (3229, 'Part 2: "La majada"');
-insert into contains values (3229, 'Part 3: "Sobran bueyes"');
-insert into contains values (3229, 'Part 4: "El día que lluevan pianos"');
-insert into contains values (3229, 'Part 5: "Canaleros"');
-insert into contains values (3229, 'Part 6: "Ojalá me quieras libre"');
-insert into contains values (3229, 'Part 7: "Ángeles del suelo"');
-insert into contains values (3229, 'Part 8: " Las últimas habitaciones"');
-insert into contains values (3229, 'Part 9: "Plomo en los bolsillos"');
-insert into contains values (3229, 'Part 10: "Pedimiento"');
-=======
 insert into song values ('Bienvenido al secadero', '2011-09-27', 224);
 insert into song values ('La majada', '2011-09-27', 255);
 insert into song values ('Sobran bueyes', '2011-09-27', 251);
@@ -357,66 +305,3 @@ insert into song values ('Ángeles del suelo', '2011-09-27', 223);
 insert into song values ('Las últimas habitaciones', '2011-09-27', 220);
 insert into song values ('Plomo en los bolsillos', '2011-09-27', 245);
 insert into song values ('Pedimiento', '2011-09-27', 260);
-
-insert into contains values (3229, 'Bienvenido al secadero');
-insert into contains values (3229, 'La majada');
-insert into contains values (3229, 'Sobran bueyes');
-insert into contains values (3229, 'El día que lluevan pianos');
-insert into contains values (3229, 'Canaleros');
-insert into contains values (3229, 'Ojalá me quieras libre');
-insert into contains values (3229, 'Ángeles del suelo');
-insert into contains values (3229, 'Las últimas habitaciones');
-insert into contains values (3229, 'Plomo en los bolsillos');
-insert into contains values (3229, 'Pedimiento');
-
-insert into user values (02321423, 'Pedro', 'López', 'Perez', 'pedrolop@gmail.com', 210);
-insert into buysTicket values (02321423, 271);
-insert into buysTicket values (02321423, 281);
-insert into buysTicket values (02321423, 160);
-insert into buysTicket values (02321423, 170);
-insert into givesOpinionConcert values (02321423, 3980, 7);
-insert into givesOpinionConcert values (02321423, 3990, 9);
-insert into givesOpinionConcert values (02321423, 4470, 6);
-insert into givesOpinionConcert values (02321423, 4480, 10);
-insert into buysDisc values (02321423, 2056);
-insert into buysDisc values (02321423, 2984);
-insert into buysDisc values (02321423, 1784);
-insert into givesOpinionDisc values (02321423, 2056, 8);
-insert into givesOpinionDisc values (02321423, 2984, 8);
-insert into givesOpinionDisc values (02321423, 1784, 7);
-
-insert into user values (05838743, 'Johnathan', 'Joestar', '', 'jojoReference@hotmail.com', 2203);
-
-insert into user values (04737492, 'Peter', 'McDonald', 'Douglas', 'peterMcd@gmail.com', 122);
-insert into buysTicket values (04737492, 171);
-insert into givesOpinionConcert values (04737492, 3980, 7);
-insert into givesOpinionDisc values (04737492, 2984, 8);
-insert into givesOpinionDisc values (04737492, 1784, 5);
-
-insert into user values (01238471, 'James', 'Miles', 'Johnson', 'jimmymj@yahoomail.com', 3);
-insert into buysTicket values (01238471, 161);
-insert into givesOpinionConcert values (01238471, 3990, 8);
-insert into givesOpinionConcert values (01238471, 4470, 5);
-
-insert into user values (04528483, 'Putin', 'Makarov', 'Vlasov', 'putinvlas@protonmail.com', 323);
-insert into buysDisc values (04528483, 2984);
-insert into givesOpinionDisc values (04528483, 2984, 7);
-
-insert into user values (04917493, 'Pierre', 'Chauvet', 'Derroux', 'picharroux@gmail.com', 1002);
-insert into buysDisc values (04917493, 2984);
-insert into buysTicket values (04917493, 184);
-
-insert into user values (03283295, 'Igor', 'Bogdanoff', 'Yourievitch', 'thebog@hotmail.com', 3023);
-insert into buysTicket values (03283295, 162);
-insert into givesOpinionConcert values (03283295, 4470, 7);
-
-insert into user values (02374827, 'Heins', 'Christoffen', 'Schmidt', 'heincrhis@hotmail.com', 2304);
-insert into buysTicket values (02374827, 282);
-insert into givesOpinionConcert values (02374827, 3990, 6);
-
-insert into user values (03284672, 'Hamza', 'Al Hajib', 'Burkashin', 'hamzahaji@gmail.com', 742);
-insert into buysDisc values (03284672, 1784);
-
-insert into user values (09373493, 'Yoko', 'Namakura', 'Furikawa', 'namasan@hotmail.com', 934);
-insert into buysTicket values (02321423, 173);
->>>>>>> d18441ed27b8b8a037655223fc32d0c2d796c358
