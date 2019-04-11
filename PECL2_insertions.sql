@@ -21,6 +21,22 @@ DELETE FROM contains;
 SET foreign_key_checks = 1; 
 SET SQL_SAFE_UPDATES = 1;
 
+insert into instrument values('Saxophone');
+insert into instrument values('Piano');
+insert into instrument values('Double bass');
+insert into instrument values('Drums');
+insert into instrument values('Guitar');
+insert into instrument values('Bass');
+insert into instrument values('Vocals');
+insert into instrument values('Electric guitar');
+insert into instrument values('Acoustic guitar');
+insert into instrument values('Drum kit');
+insert into instrument values('Harmonica');
+insert into instrument values('Maraces');
+insert into instrument values('Percussion');
+insert into instrument values('Electric Harp');
+
+
 #John Coltrane´s Band ID: 270
 insert into musicGroup values (270, 'Jazz');
 
@@ -35,12 +51,6 @@ insert into belongs values (05334423, 270);
 insert into belongs values (04628696, 270);
 insert into belongs values (08484326, 270);
 insert into belongs values (05427651, 270);
-
-insert into instrument values (06166844, 'Saxophone');
-insert into instrument values (05334423, 'Piano');
-insert into instrument values (04628696, 'Piano');
-insert into instrument values (08484326, 'Double bass');
-insert into instrument values (05427651, 'Drums');
 
 insert into plays values (06166844, 'Saxophone');
 insert into plays values (05334423, 'Piano');
@@ -110,11 +120,6 @@ insert into belongs values (05264892, 110);
 insert into belongs values (09452841, 110);
 insert into belongs values (05672350, 110);
 
-insert into instrument values (05264892, 'Guitar');
-insert into instrument values (05672350, 'Bass');
-insert into instrument values (09452841, 'Drums');
-insert into instrument values (05392301, 'Saxophone');
-
 insert into plays values (05264892, 'Guitar');
 insert into plays values (05672350, 'Bass');
 insert into plays values (09452841, 'Drums');
@@ -162,57 +167,6 @@ insert into sells values (4480 ,170);
 insert into sells values (4480, 171);
 insert into sells values (4480, 172);
 
-insert into user values (02321423, 'Pedro', 'López', 'Perez', 'pedrolop@gmail.com', 210);
-insert into buysTicket values (02321423, 271);
-insert into buysTicket values (02321423, 281);
-insert into buysTicket values (02321423, 160);
-insert into buysTicket values (02321423, 170);
-insert into givesOpinionConcert values (02321423, 3980, 7);
-insert into givesOpinionConcert values (02321423, 3990, 9);
-insert into givesOpinionConcert values (02321423, 4470, 6);
-insert into givesOpinionConcert values (02321423, 4480, 10);
-insert into buysDisc values (02321423, 2056);
-insert into buysDisc values (02321423, 2984);
-insert into buysDisc values (02321423, 1784);
-insert into givesOpinionDisc values (02321423, 2056, 8);
-insert into givesOpinionDisc values (02321423, 2984, 8);
-insert into givesOpinionDisc values (02321423, 1784, 7);
-
-insert into user values (05838743, 'Johnathan', 'Joestar', '', 'jojoReference@hotmail.com', 2203);
-
-insert into user values (04737492, 'Peter', 'McDonald', 'Douglas', 'peterMcd@gmail.com', 122);
-insert into buysTicket values (04737492, 171);
-insert into givesOpinionConcert values (04737492, 3980, 7);
-insert into givesOpinionDisc values (04737492, 2984, 8);
-insert into givesOpinionDisc values (04737492, 1784, 5);
-
-insert into user values (01238471, 'James', 'Miles', 'Johnson', 'jimmymj@yahoomail.com', 3);
-insert into buysTicket values (01238471, 161);
-insert into givesOpinionConcert values (01238471, 3990, 8);
-insert into givesOpinionConcert values (01238471, 4470, 5);
-
-insert into user values (04528483, 'Putin', 'Makarov', 'Vlasov', 'putinvlas@protonmail.com', 323);
-insert into buysDisc values (04528483, 2984);
-insert into givesOpinionDisc values (04528483, 2984, 7);
-
-insert into user values (04917493, 'Pierre', 'Chauvet', 'Derroux', 'picharroux@gmail.com', 1002);
-insert into buysDisc values (04917493, 2984);
-insert into buysTicket values (04917493, 184);
-
-insert into user values (03283295, 'Igor', 'Bogdanoff', 'Yourievitch', 'thebog@hotmail.com', 3023);
-insert into buysTicket values (03283295, 162);
-insert into givesOpinionConcert values (03283295, 4470, 7);
-
-insert into user values (02374827, 'Heins', 'Christoffen', 'Schmidt', 'heincrhis@hotmail.com', 2304);
-insert into buysTicket values (02374827, 282);
-insert into givesOpinionConcert values (02374827, 3990, 6);
-
-insert into user values (03284672, 'Hamza', 'Al Hajib', 'Burkashin', 'hamzahaji@gmail.com', 742);
-insert into buysDisc values (03284672, 1784);
-
-insert into user values (09373493, 'Yoko', 'Namakura', 'Furikawa', 'namasan@hotmail.com', 934);
-insert into buysTicket values (02321423, 173);
-
 #Reincidentes´s Band ID: 430
 insert into musicGroup values (430, 'Rock');
 
@@ -227,14 +181,6 @@ insert into belongs values (07376429, 430);
 insert into belongs values (04949485, 430);
 insert into belongs values (04949365, 430);
 insert into belongs values (05453651, 430);
-
-insert into instrument values (04136534, 'Vocals');
-insert into instrument values (07376429, 'Bass');
-insert into instrument values (07376429, 'Vocals');
-insert into instrument values (04949485, 'Electric guitar');
-insert into instrument values (04949365, 'Electric guitar');
-insert into instrument values (04949365, 'Acoustic guitar');
-insert into instrument values (05453651, 'Drums');
 
 insert into plays values (04136534, 'Vocals');
 insert into plays values (07376429, 'Bass');
@@ -305,3 +251,101 @@ insert into song values ('Ángeles del suelo', '2011-09-27', 223);
 insert into song values ('Las últimas habitaciones', '2011-09-27', 220);
 insert into song values ('Plomo en los bolsillos', '2011-09-27', 245);
 insert into song values ('Pedimiento', '2011-09-27', 260);
+
+insert into contains values (3229, 'Bienvenido al secadero');
+insert into contains values (3229, 'La majada');
+insert into contains values (3229, 'Sobran bueyes');
+insert into contains values (3229, 'El día que lluevan pianos');
+insert into contains values (3229, 'Canaleros');
+insert into contains values (3229, 'Ojalá me quieras libre');
+insert into contains values (3229, 'Ángeles del suelo');
+insert into contains values (3229, 'Las últimas habitaciones');
+insert into contains values (3229, 'Plomo en los bolsillos');
+insert into contains values (3229, 'Pedimiento');
+
+#Metallica band
+insert into musicGroup values (330, 'Metal');
+
+insert into musician values (03125847, 'James', 'Hetfield', 'Quinn Street. 17', 90241, 'Downey', 'California', 694586039, 927493748);
+insert into musician values (02859274, 'Lars', 'Ulrich', 'Brogårdsvej 44', 2820, 'Gentofte', 'Hovedstaden', 638478395, 926482372);
+insert into musician values (01839583, 'Kirk', 'Hamett', 'Renfrew Rd 12', 94803, 'El Sobrante', 'California', 638473844, 940384903);
+insert into musician values (04322883, 'Robert', 'Trujillo', 'Alta Ave. 30', 90402, 'Santa Monica', 'California', 683844029, 902748343);
+
+insert into belongs values (03125847, 330);
+insert into belongs values (02859274, 330);
+insert into belongs values (01839583, 330);
+insert into belongs values (04322883, 330);
+
+insert into plays values (03125847, 'Guitar');
+insert into plays values (02859274, 'Drums');
+insert into plays values (01839583, 'Guitar');
+insert into plays values (04322883, 'Bass');
+
+insert into disc values (1203, 'Master of Puppets', '2018-03-03', 'Digital', 'wav', '4096 MB', '');
+insert into creates values (330, 1203);
+
+insert into song values ('Battery', '2018-03-03', 313);
+insert into song values ('Master of Puppets', '2018-03-03', 515);
+insert into song values ('The Thing That Should Not Be', '2018-03-03', 396);
+insert into song values ('Welcome Home (Sanitarium)', '2018-03-03', 387);
+insert into song values ('Disposable Heroes', '2018-03-03', 497);
+insert into song values ('Leper Messiah', '2018-03-03', 340);
+insert into song values ('Orion', '2018-03-03', 507);
+insert into song values ('Damage, Inc.', '2018-03-03', 332);
+insert into song values ('Battery (Live)', '2018-03-03', 293);
+insert into song values ('The Thing That Should Not Be (Live)', '2018-03-03', 422);
+
+insert into contains values(1203, 'Battery');
+insert into contains values(1203, 'Master of Puppets');
+insert into contains values(1203, 'The Thing That Should Not Be');
+insert into contains values(1203, 'Welcome Home (Sanitarium)');
+insert into contains values(1203, 'Disposable Heroes');
+insert into contains values(1203, 'Leper Messiah');
+insert into contains values(1203, 'Orion');
+insert into contains values(1203, 'Damage, Inc.');
+insert into contains values(1203, 'Battery (Live)');
+insert into contains values(1203, 'The Thing That Should Not Be (Live)');
+
+#Users
+insert into user values(2321423, 'Pedro', 'López', 'Perez', 'pedrolop@gmail.com',210);
+insert into user values(5838743, 'Johnathan', 'Joestar', '', 'jojoReference@hotmail.com',2203);
+insert into user values(4737492, 'Peter', 'McDonald', 'Douglas', 'peterMcd@gmail.com',122);
+insert into user values(1238471, 'James', 'Miles', 'Johnson', 'jimmymj@yahoomail.com',3);
+insert into user values(4528483, 'Putin', 'Makarov', 'Vlasov', 'putinvlas@protonmail.com',323);
+insert into user values(4917493, 'Pierre', 'Chauvet', 'Derroux', 'picharroux@gmail.com',1002);
+insert into user values(3283295, 'Igor', 'Bogdanoff', 'Yourievitch', 'thebog@hotmail.com',3023);
+insert into user values(2374827, 'Heins', 'Christoffen', 'Schmidt', 'heincrhis@hotmail.com',2304);
+insert into user values(9373493, 'Yoko', 'Namakura', 'Furikawa', 'namasan@hotmail.com',934);
+
+insert into buysDisc values(2321423,2056);
+insert into buysDisc values(2321423,2984);
+insert into buysDisc values(2321423,1784);
+insert into buysDisc values(4528483,2984);
+insert into buysDisc values(4917493,2984);
+
+insert into buysTicket values(2321423,1,271);
+insert into buysTicket values(2321423,2,281);
+insert into buysTicket values(2321423,3,160);
+insert into buysTicket values(2321423,4,170);
+insert into buysTicket values(4737492,1,171);
+insert into buysTicket values(1238471,1,161);
+insert into buysTicket values(4917493,1,184);
+insert into buysTicket values(3283295,1,162);
+insert into buysTicket values(2374827,1,282);
+
+insert into givesOpinionConcert values (2321423,3980,7);
+insert into givesOpinionConcert values (2321423,3990,9);
+insert into givesOpinionConcert values (2321423,4470,6);
+insert into givesOpinionConcert values (2321423,4480,10);
+insert into givesOpinionConcert values (4737492,3980,7);
+insert into givesOpinionConcert values (1238471,3990,8);
+insert into givesOpinionConcert values (1238471,4470,5);
+insert into givesOpinionConcert values (3283295,4470,7);
+insert into givesOpinionConcert values (2374827,3990,6);
+
+insert into givesOpinionDisc values (2321423,2056,8);
+insert into givesOpinionDisc values (2321423,2984,8);
+insert into givesOpinionDisc values (2321423,1784,7);
+insert into givesOpinionDisc values (4737492,2984,8);
+insert into givesOpinionDisc values (4737492,1784,5);
+insert into givesOpinionDisc values (4528483,2984,7);
