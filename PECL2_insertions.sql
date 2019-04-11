@@ -263,7 +263,7 @@ insert into contains values (3229, 'Las últimas habitaciones');
 insert into contains values (3229, 'Plomo en los bolsillos');
 insert into contains values (3229, 'Pedimiento');
 
-#Metallica band
+#Metallica band ID: 330
 insert into musicGroup values (330, 'Metal');
 
 insert into musician values (03125847, 'James', 'Hetfield', 'Quinn Street. 17', 90241, 'Downey', 'California', 694586039, 927493748);
@@ -315,6 +315,58 @@ insert into sells values (4900, 470);
 insert into sells values (4900, 471);
 insert into sells values (4900, 472);
 
+#ACDC band ID: 362
+insert into musicgroup values(362, 'Metal');
+insert into musician values(08372185,'Brian','Johnson','Rendel St',70322, 'Dunston', 'Gateshead',687509419,941297051);
+insert into musician values(03245623,'Angus','Young','Water St',70312, 'Sidney', 'Sidney',632191930,943214751);
+insert into musician values(03144134,'Stevie','Young','Sauchihall St',70311, 'Glasgow', 'London',657129104,937518239);
+insert into musician values(04321561,'Phil','Rudd','La Trobe St',70312,'Melbourne', 'Victoria',641732910,934175182);
+
+insert into belongs values(08372185,362);
+insert into belongs values(03245623,362);
+insert into belongs values(03144134,362);
+insert into belongs values(04321561,362);
+
+insert into plays values(08372185, 'Vocals');
+insert into plays values(03245623, 'Electric Guitar');
+insert into plays values(03144134, 'Electric Guitar');
+insert into plays values(04321561, 'Drum kit');
+insert into plays values(04321561, 'Percussion');
+
+insert into disc values (8892, 'Highway to Hell', '1979-11-06', 'Physical', '', '', 'CD');
+insert into creates values (362, 8892);
+
+insert into song values ('Highway to Hell', '1979-11-06', 209);
+insert into song values ('Girls Got Rythm', '1979-11-06', 204);
+insert into song values ('Walk All Over You', '1979-11-06', 310);
+insert into song values ('Touch Too Much', '1979-11-06', 268);
+insert into song values ('Beating Around the Bush', '1979-11-06', 237);
+insert into song values ('Shot Down in Flames', '1979-11-06', 203);
+insert into song values ('Get It Hot', '1979-11-06', 155);
+insert into song values ('If You Want Blood (You´ve Got It)', '1979-11-06', 278);
+insert into song values ('Love Hungry Man', '1979-11-06', 258);
+insert into song values ('Night Prowler', '1979-11-06', 378);
+
+insert into contains values (8892, 'Highway to Hell');
+insert into contains values (8892, 'Girls Got Rythm');
+insert into contains values (8892, 'Walk All Over You');
+insert into contains values (8892, 'Touch Too Much');
+insert into contains values (8892, 'Beating Around the Bush');
+insert into contains values (8892, 'Shot Down in Flames');
+insert into contains values (8892, 'Get It Hot');
+insert into contains values (8892, 'If You Want Blood (You´ve Got It)');
+insert into contains values (8892, 'Love Hungry Man');
+insert into contains values (8892, 'Night Prowler');
+
+insert into concert values (7650, '2020-02-20', 'Japan', 'Tokyo', 'Yoyogi Park');
+insert into performs values (362, 7650);
+insert into ticket values (909, 120);
+insert into ticket values (910, 120);
+insert into ticket values (911, 120);
+insert into sells values (7650, 470);
+insert into sells values (7650, 471);
+insert into sells values (7650, 472);
+
 #Users
 insert into user values(02321423, 'Pedro', 'López', 'Perez', 'pedrolop@gmail.com',210);
 insert into user values(05838743, 'Johnathan', 'Joestar', '', 'jojoReference@hotmail.com',2203);
@@ -334,6 +386,9 @@ insert into buysDisc values(04917493,2984);
 insert into buysDisc values(01238471,1203);
 insert into buysDisc values(04528483,1203);
 insert into buysDisc values(04917493,1203);
+insert into buysDisc values(01238471,8892);
+insert into buysDisc values(04528483,8892);
+insert into buysDisc values(09373493,8892);
 
 insert into buysTicket values(02321423,1,271);
 insert into buysTicket values(02321423,2,281);
@@ -347,6 +402,9 @@ insert into buysTicket values(02374827,1,282);
 insert into buysTicket values(03283295,2,470);
 insert into buysTicket values(02374827,2,471);
 insert into buysTicket values(09373493,2,472);
+insert into buysTicket values(01238471,3,909);
+insert into buysTicket values(04528483,3,910);
+insert into buysTicket values(09373493,3,911);
 
 insert into givesOpinionConcert values (02321423,3980,7);
 insert into givesOpinionConcert values (02321423,3990,9);
@@ -360,6 +418,9 @@ insert into givesOpinionConcert values (02374827,3990,6);
 insert into givesOpinionConcert values (03283295,4900,7);
 insert into givesOpinionConcert values (02374827,4900,9);
 insert into givesOpinionConcert values (09373493,4900,10);
+insert into givesOpinionConcert values (01238471,7650,5);
+insert into givesOpinionConcert values (04528483,7650,6);
+insert into givesOpinionConcert values (09373493,7650,9);
 
 insert into givesOpinionDisc values (02321423,2056,8);
 insert into givesOpinionDisc values (02321423,2984,8);
@@ -369,3 +430,6 @@ insert into givesOpinionDisc values (04737492,1784,5);
 insert into givesOpinionDisc values (01238471,1203,7);
 insert into givesOpinionDisc values (04528483,1203,10);
 insert into givesOpinionDisc values (04917493,1203,6);
+insert into givesOpinionDisc values (01238471,8892,5);
+insert into givesOpinionDisc values (04528483,8892,7);
+insert into givesOpinionDisc values (09373493,8892,8);
