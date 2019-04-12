@@ -192,19 +192,23 @@ SELECT DISTINCT
     musician.name, disc.title, disc.song_format, disc.size_disc
 FROM
     musician,
+    belongs,
     musicgroup,
     disc,
     creates,
     plays,
     instrument
 WHERE
-    disc.model_disc = 'Digital'
-		&& musicgroup.genre = 'Jazz'
-        && musicgroup.id = creates.id_musicGroup
+	musicgroup.id = creates.id_musicGroup
         && creates.reference_id = disc.id
         && musician.id = plays.id_musician
+        && musician.id = belongs.id_musician
+        && musicgroup.id = belongs.id_group
         && instrument.name_instrument = plays.name_instrument
-        && instrument.name_instrument = 'Guitar';
+        && instrument.name_instrument = 'Guitar'
+        && disc.model_disc = 'Digital'
+        && musicgroup.genre = 'Jazz';
+
 #13
 SELECT 
     user.name, user.firstSurname, user.secondSurname
