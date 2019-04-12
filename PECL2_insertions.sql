@@ -486,31 +486,31 @@ insert into sells values(9200,619);
 #The Rolling Stones´s Band ID: 781
 insert into musicgroup values(781, 'Rock');
 
-insert into musician values(8321941, 'Mike', 'Jagger', 'Orchard St',70312, 'Dartford', 'Kent',432758192,948928192);
-insert into musician values(7984074, 'Keith', 'Richards', 'Home Gardens St',70312, 'Dartford', 'Kent',432753281,942076582);
-insert into musician values(7438203, 'Charlie', 'Watts', 'Cockspur St',70311, 'London', 'London',492758132,947327617);
-insert into musician values(4632752, 'Ron', 'Wood', 'Middlesex St',70312, 'London', 'London',432039192,903725131);
+insert into musician values(08321941, 'Mike', 'Jagger', 'Orchard St',70312, 'Dartford', 'Kent',432758192,948928192);
+insert into musician values(07984074, 'Keith', 'Richards', 'Home Gardens St',70312, 'Dartford', 'Kent',432753281,942076582);
+insert into musician values(07438203, 'Charlie', 'Watts', 'Cockspur St',70311, 'London', 'London',492758132,947327617);
+insert into musician values(04632752, 'Ron', 'Wood', 'Middlesex St',70312, 'London', 'London',432039192,903725131);
 
-insert into belongs values(8321941,781);
-insert into belongs values(7984074,781);
-insert into belongs values(7438203,781);
-insert into belongs values(4632752,781);
+insert into belongs values(08321941,781);
+insert into belongs values(07984074,781);
+insert into belongs values(07438203,781);
+insert into belongs values(04632752,781);
 
-insert into plays values(8321941, 'Vocals');
-insert into plays values(8321941, 'Harmonica');
-insert into plays values(8321941, 'Guitar');
-insert into plays values(8321941, 'Maraces');
-insert into plays values(7984074, 'Vocals');
-insert into plays values(7984074, 'Piano');
-insert into plays values(7984074, 'Bass');
-insert into plays values(7984074, 'Guitar');
-insert into plays values(7438203, 'Percussion');
-insert into plays values(7438203, 'Drum kit');
-insert into plays values(4632752, 'Guitar');
-insert into plays values(4632752, 'Saxophone');
-insert into plays values(4632752, 'Bass');
-insert into plays values(4632752, 'Electric Harp');
-insert into plays values(4632752, 'Harmonica');
+insert into plays values(08321941, 'Vocals');
+insert into plays values(08321941, 'Harmonica');
+insert into plays values(08321941, 'Guitar');
+insert into plays values(08321941, 'Maraces');
+insert into plays values(07984074, 'Vocals');
+insert into plays values(07984074, 'Piano');
+insert into plays values(07984074, 'Bass');
+insert into plays values(07984074, 'Guitar');
+insert into plays values(07438203, 'Percussion');
+insert into plays values(07438203, 'Drum kit');
+insert into plays values(04632752, 'Guitar');
+insert into plays values(04632752, 'Saxophone');
+insert into plays values(04632752, 'Bass');
+insert into plays values(04632752, 'Electric Harp');
+insert into plays values(04632752, 'Harmonica');
 
 insert into disc values(3282, 'The Rolling Stones', '1964-04-19', 'Physical', '', '', 'lp');
 insert into creates values(781,3282);
@@ -527,6 +527,19 @@ insert into song values( 'Can I Get a Witness', '1964-04-19',175);
 insert into song values( 'You Can Make It If You Try', '1964-04-19',121);
 insert into song values( 'Walking the Dog', '1964-04-19',190);
 
+insert into contains values(3282, 'Route 66');
+insert into contains values(3282, 'I Just Want to Make Love to You');
+insert into contains values(3282, 'Honest I Do');
+insert into contains values(3282, 'Mona (I Need You Baby)');
+insert into contains values(3282, 'Now I have Got a Witness (Like Uncle Phil and Uncle Gene)');
+insert into contains values(3282, 'Little by Little');
+insert into contains values(3282, 'I am a King Bee');
+insert into contains values(3282, 'Carol');
+insert into contains values(3282, 'Tell Me (You are Coming Back)');
+insert into contains values(3282, 'Can I Get a Witness');
+insert into contains values(3282, 'You Can Make It If You Try');
+insert into contains values(3282, 'Walking the Dog');
+
 insert into disc values(3627, '12 X 5', '1964-10-17', 'Physical', '', '', 'lp');
 insert into creates values(781,3627);
 insert into song values( 'Around and Around', '1964-10-17',183);
@@ -541,6 +554,20 @@ insert into song values( 'Congratulations', '1964-10-17',148);
 insert into song values( 'Grown Up Wrong', '1964-10-17',124);
 insert into song values( 'If You Need Me', '1964-10-17',123);
 insert into song values( 'Susie Q', '1964-10-17',111);
+
+insert into contains values(3627, 'Around and Around');
+insert into contains values(3627, 'Confessing the Blues');
+insert into contains values(3627, 'Empty Heart');
+insert into contains values(3627, 'Time Is on My Side');
+insert into contains values(3627, 'Good Times, Bad Times');
+insert into contains values(3627, 'It is All Over Now');
+insert into contains values(3627, '2120 South Michigan Avenue');
+insert into contains values(3627, 'Under the Boardwalk');
+insert into contains values(3627, 'Congratulations');
+insert into contains values(3627, 'Grown Up Wrong');
+insert into contains values(3627, 'If You Need Me');
+insert into contains values(3627, 'Susie Q');
+
 
 insert into disc values(7329, 'Aftermath', '1966-04-15', 'Physical', '', '', 'lp');
 insert into creates values(781,7329);
@@ -559,6 +586,21 @@ insert into song values( 'Take It or Leave It', '1966-04-15',167);
 insert into song values( 'Think', '1966-04-15',189);
 insert into song values( 'What to Do', '1966-04-15',152);
 
+insert into contains values(7329, 'Mother,s Little Helper');
+insert into contains values(7329, 'Stupid Girl');
+insert into contains values(7329, 'Lady Jane');
+insert into contains values(7329, 'Under My Thumb');
+insert into contains values(7329, 'Doncha Bother Me');
+insert into contains values(7329, 'Going Home');
+insert into contains values(7329, 'Flight 505');
+insert into contains values(7329, 'High and Dry');
+insert into contains values(7329, 'Out of Time');
+insert into contains values(7329, 'It is Not Easy');
+insert into contains values(7329, 'I Am Waiting');
+insert into contains values(7329, 'Take It or Leave It');
+insert into contains values(7329, 'Think');
+insert into contains values(7329, 'What to Do');
+
 insert into disc values(7482, 'Some Girls', '1978-06-09', 'Physical', '', '', 'lp');
 insert into creates values(781,7482);
 insert into song values( 'Miss You', '1978-06-09',288);
@@ -571,6 +613,17 @@ insert into song values( 'Respectable', '1978-06-09',186);
 insert into song values( 'Before They Make Me Run', '1978-06-09',205);
 insert into song values( 'Beast of Burden', '1978-06-09',265);
 insert into song values( 'Shattered', '1978-06-09',228);
+
+insert into contains values(7482, 'Miss You');
+insert into contains values(7482, 'When the Whip Comes Down');
+insert into contains values(7482, 'Just My Imagination (Running Away with Me)');
+insert into contains values(7482, 'Some Girls');
+insert into contains values(7482, 'Lies');
+insert into contains values(7482, 'Far Away Eyes');
+insert into contains values(7482, 'Respectable');
+insert into contains values(7482, 'Before They Make Me Run');
+insert into contains values(7482, 'Beast of Burden');
+insert into contains values(7482, 'Shattered');
 
 insert into disc values(5738, 'Voodoo Lounge', '1994-07-18', 'Physical', '', '', 'lp');
 insert into creates values(781,5738);
@@ -589,6 +642,22 @@ insert into song values( 'Blinded by Rainbows', '1994-07-18',273);
 insert into song values( 'Baby Break It Down', '1994-07-18',247);
 insert into song values( 'Thru and Thru', '1994-07-18',359);
 insert into song values( 'Mean Disposition', '1994-07-18',249);
+
+insert into contains values(5738, 'Love Is Strong');
+insert into contains values(5738, 'You Got Me Rocking');
+insert into contains values(5738, 'Sparks Will Fly');
+insert into contains values(5738, 'The Worst');
+insert into contains values(5738, 'New Faces');
+insert into contains values(5738, 'Moon Is Up');
+insert into contains values(5738, 'Out of Tears');
+insert into contains values(5738, 'I Go Wild');
+insert into contains values(5738, 'Brand New Car');
+insert into contains values(5738, 'Sweethearts Together');
+insert into contains values(5738, 'Suck on the Jugular');
+insert into contains values(5738, 'Blinded by Rainbows');
+insert into contains values(5738, 'Baby Break It Down');
+insert into contains values(5738, 'Thru and Thru');
+insert into contains values(5738, 'Mean Disposition');
 
 insert into disc values(6234, 'A Bigger Bang', '2005-09-06', 'Physical', '', '', 'CD');
 insert into creates values(781,6234);
@@ -609,6 +678,23 @@ insert into song values( 'Look What the Cat Dragged In', '2005-09-06',237);
 insert into song values( 'Driving Too Fast', '2005-09-06',236);
 insert into song values( 'Infamy', '2005-09-06',227);
 
+insert into contains values(6234, 'Rough Justice');
+insert into contains values(6234, 'Let Me Down Slow');
+insert into contains values(6234, 'It Won,t Take Long');
+insert into contains values(6234, 'Rain Fall Down');
+insert into contains values(6234, 'Streets of Love');
+insert into contains values(6234, 'Back of My Hand');
+insert into contains values(6234, 'She Saw Me Coming');
+insert into contains values(6234, 'Biggest Mistake');
+insert into contains values(6234, 'This Place Is Empty');
+insert into contains values(6234, 'Oh No, Not You Again');
+insert into contains values(6234, 'Dangerous Beauty');
+insert into contains values(6234, 'Laugh, I Nearly Died');
+insert into contains values(6234, 'Sweet Neo Con');
+insert into contains values(6234, 'Look What the Cat Dragged In');
+insert into contains values(6234, 'Driving Too Fast');
+insert into contains values(6234, 'Infamy');
+
 insert into disc values(7231, 'Blue & Lonesome', '2016-12-02', 'Digital', 'mp3', '2048 MB', '');
 insert into creates values(781,7231);
 insert into song values( 'Just Your Fool', '2016-12-02',136);
@@ -623,6 +709,19 @@ insert into song values( 'Hoo Doo Blues', '2016-12-02',156);
 insert into song values( 'Little Rain', '2016-12-02',212);
 insert into song values( 'Just Like I Treat You', '2016-12-02',204);
 insert into song values( 'I Can,t Quit You Baby', '2016-12-02',313);
+
+insert into contains values(7231, 'Just Your Fool');
+insert into contains values(7231, 'Commit a Crime');
+insert into contains values(7231, 'Blue and Lonesome');
+insert into contains values(7231, 'All of Your Love');
+insert into contains values(7231, 'I Gotta Go');
+insert into contains values(7231, 'Everybody Knows About My Good Thing');
+insert into contains values(7231, 'Ride Them on Down');
+insert into contains values(7231, 'Hate to See You Go');
+insert into contains values(7231, 'Hoo Doo Blues');
+insert into contains values(7231, 'Little Rain');
+insert into contains values(7231, 'Just Like I Treat You');
+insert into contains values(7231, 'I Can,t Quit You Baby');
 
 insert into concert values(8437, '2019-03-01', 'Spain', 'Barcelona', 'Palau Sant Jordi');
 insert into performs values(781,8437);
