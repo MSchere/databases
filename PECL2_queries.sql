@@ -15,17 +15,6 @@ FROM
     instrument ON plays.name_instrument = instrument.name_instrument
 WHERE
     instrument.name_instrument = 'Drums';
-
-SELECT DISTINCT
-    musician.name
-FROM
-    musician,
-    plays,
-    instrument
-WHERE
-    musician.id = plays.id_musician
-        && plays.name_instrument = instrument.name_instrument
-        && instrument.name_instrument = 'Drums';
 #3
 SELECT DISTINCT
     musician.name
@@ -75,22 +64,8 @@ WHERE
 GROUP BY disc.title
 HAVING COUNT(contains.title_song) > 10;
 #6
-SELECT DISTINCT
-    musicgroup.id, musicgroup.genre
-FROM
-    musicgroup,
-    (SELECT 
-        COUNT(musician.id) AS counted
-    FROM
-        musician, belongs, musicgroup
-    WHERE
-        belongs.id_musician = musician.id
-            && belongs.id_group = musicgroup.id
-    GROUP BY musicgroup.id) AS counts
-WHERE
-    counted >= 3;
-SELECT DISTINCT
-    musicgroup.id, musicgroup.genre
+SELECT
+    musicgroup.id
 FROM
     musicgroup,
     belongs,
@@ -129,7 +104,7 @@ WHERE
         && disc.disc_type = 'lp';
 #9
 SELECT DISTINCT
-    musician.name, concert.city
+    musician.name
 FROM
     musician,
     belongs,
@@ -148,8 +123,8 @@ WHERE
         && belongs.id_group = musicgroup.id
         && belongs.id_musician = musician.id;
 #10
-SELECT
-    givesopinionconcert.points_rate_concert
+SELECT DISTINCT
+    user.nif, user.name, givesopinionconcert.points_rate_concert
 FROM
     concert,
     sells,
@@ -245,9 +220,8 @@ WHERE
 GROUP BY song.title
 HAVING AVG(givesopiniondisc.points_rate_disc) >= 8;
 #15
-
 SELECT DISTINCT
-    musicgroup.id, musician.id
+    musicgroup.id, musicgroup.genre, musician.id, musician.name
 FROM
     musician,
     belongs,
@@ -300,5 +274,4 @@ WHERE
         WHERE
             musicgroup.id = performs.id_musicGroup
                 && performs.code_concert = concert.code
-                && '2017' = YEAR(concert.concertDate))
-	;
+                && '2017' = YEAR(concert.concertDate));
