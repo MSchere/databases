@@ -47,17 +47,6 @@ SELECT
     disc.title
 FROM
     contains,
-    disc,
-    song
-WHERE
-    song.title = contains.title_song
-        && contains.reference_id = disc.id
-GROUP BY disc.title
-HAVING COUNT(contains.title_song) > 10;
-SELECT 
-    disc.title
-FROM
-    contains,
     disc
 WHERE
     contains.reference_id = disc.id
@@ -74,7 +63,7 @@ WHERE
     belongs.id_musician = musician.id
         && belongs.id_group = musicgroup.id
 GROUP BY musicgroup.id
-HAVING COUNT(musician.id) >= 3;
+HAVING COUNT(musician.id) > 3;
 #7
 SELECT 
     user.name, disc.title, givesopiniondisc.points_rate_disc
@@ -93,12 +82,17 @@ HAVING COUNT(buysdisc.disc_id) >= 3;
 SELECT DISTINCT
     disc.id, disc.title
 FROM
+	musicgroup,
+    creates,
     disc,
     contains,
     song
 WHERE
     song.title = contains.title_song
+		&& musicgroup.id = creates.id_musicGroup
+        && disc.id = creates.reference_id
         && contains.reference_id = disc.id
+        && musicgroup.genre = 'Rock'
         && song.duration > 300
         && disc.model_disc = 'Physical'
         && disc.disc_type = 'lp';
@@ -185,7 +179,7 @@ WHERE
         && musicgroup.genre = 'Jazz';
 
 #13
-SELECT 
+SELECT DISTINCT
     user.name, user.firstSurname, user.secondSurname
 FROM
     user,
@@ -193,15 +187,20 @@ FROM
     concert,
     sells,
     ticket,
-    buysticket
+    buysticket,
+    performs,
+    musicgroup
 WHERE
     concert.code = sells.concert_code
         && sells.ticket_code = ticket.code
         && user.nif = buysticket.user_nif
         && ticket.code = buysticket.ticket_code
         && givesopinionconcert.concert_code = concert.code
+        && concert.code = performs.code_concert
+        && performs.id_musicGroup = musicgroup.id
         && user.nif = givesopinionconcert.user_nif
-        && YEAR(concert.concertDate) = '2018';
+        && musicgroup.genre = 'Jazz'
+        && YEAR(buysticket.date_ticket_bought) = '2018';
 #14
 SELECT 
     disc.title, song.title, givesopiniondisc.points_rate_disc
